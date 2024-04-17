@@ -1,0 +1,20 @@
+{
+    "buttons": {
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất",
+        "create": "Tạo",
+        "cancel": "Huỷ",
+        "edit": "Sửa",
+        "ok": "OK",
+        "delete": "Xoá"
+    },
+    "network_error": {
+        "invalid_request": "Invalid Request",
+        "unauthorized": "Unauthorized",
+        "forbidden_error": "Forbidden Request",
+        "invalid_input": "Invalid Input",
+        "request_timeout": "Request Timeout",
+        "internal_server_error": "Internal Server Error",
+        "no_network_connection": "No Internet connection"
+    }
+}

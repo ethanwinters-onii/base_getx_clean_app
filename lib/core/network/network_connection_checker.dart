@@ -8,14 +8,14 @@ class NetworkChecker {
       ConnectivityResult.none.obs;
 
   static Future<void> init() async {
-    connectivityResult.value = (await (Connectivity().checkConnectivity())) as ConnectivityResult;
+    connectivityResult.value = await Connectivity().checkConnectivity();
     Connectivity().onConnectivityChanged.listen((event) {
-      connectivityResult.value = event as ConnectivityResult;
+      connectivityResult.value = event;
     });
   }
 
   static Future<bool> get isConnected async {
-    connectivityResult.value = (await Connectivity().checkConnectivity()) as ConnectivityResult;
+    connectivityResult.value = await Connectivity().checkConnectivity();
     return (connectivityResult.value == ConnectivityResult.mobile ||
         connectivityResult.value == ConnectivityResult.wifi);
   }

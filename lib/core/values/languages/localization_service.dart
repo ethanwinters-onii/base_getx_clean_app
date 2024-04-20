@@ -1,11 +1,9 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:getx_clean_architecture/core/utils/local_storage/hive_storage.dart';
 import 'package:getx_clean_architecture/core/utils/local_storage/local_db_constants.dart';
 import 'package:get/get.dart';
 import 'package:getx_clean_architecture/generated/locales.g.dart';
-import 'package:intl/intl.dart';
 
 import '../constants.dart';
 
@@ -15,7 +13,11 @@ class LocalizationService extends Translations {
   static const fallbackLocale =
       Locale(LanguageCodeConstant.VI, LanguageCountryConstant.VI);
 
-  static final langCodes = [LanguageCodeConstant.EN, LanguageCodeConstant.VI, LanguageCodeConstant.CN];
+  static final langCodes = [
+    LanguageCodeConstant.EN,
+    LanguageCodeConstant.VI,
+    LanguageCodeConstant.CN
+  ];
 
   static final locales = [
     const Locale(LanguageCodeConstant.EN, LanguageCountryConstant.EN),
@@ -39,6 +41,7 @@ class LocalizationService extends Translations {
     for (int i = 0; i < langCodes.length; i++) {
       if (lang == langCodes[i]) return locales[i];
     }
+    print(Get.locale);
     return Get.locale;
   }
 

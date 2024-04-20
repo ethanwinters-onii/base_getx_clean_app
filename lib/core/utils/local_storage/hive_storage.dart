@@ -1,4 +1,4 @@
-import 'package:hive/hive.dart';
+import 'package:getx_clean_architecture/features/authentication/data/models/account.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class HiveStorage {
@@ -17,6 +17,7 @@ class HiveStorage {
 
     // TODO: register adapters below here
     // e.x. await Hive.registerAdapter(ExampleAdapter());
+    Hive.registerAdapter<AccountModel>(AccountModelAdapter());
     var openMiscBox = await Hive.openBox("base");
   }
 }

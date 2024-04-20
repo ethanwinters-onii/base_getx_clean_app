@@ -10,7 +10,7 @@ class MainLayout<T extends BaseController> extends StatelessWidget {
     this.withImageBackground = false,
     required this.child,
     this.onClick,
-    this.backgroundColor = Colors.transparent,
+    this.backgroundColor = Colors.white,
     Key? key,
     this.resizeToAvoidBottomInset,
     this.imageBackground,
@@ -50,7 +50,13 @@ class MainLayout<T extends BaseController> extends StatelessWidget {
                 () => Visibility(
                   visible: Get.find<T>().getStatus() == Status.loading ||
                       Get.find<T>().getStatus() == Status.waiting,
-                  child: indicator ?? const SizedBox.shrink(),
+                  child: indicator ?? Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: const Center(
+                      child: CircularProgressIndicator(color: Colors.blue,),
+                    ),
+                  ),
                 ),
               ),
             ),

@@ -26,16 +26,4 @@ extension StringExtension on String {
   DateTime toDateTime() {
     return DateFormat("yyyy-MM-dd HH:mm:ss").parse(this);
   }
-
-  // from QRTime to DateTime: sample: yyyyMMddHHmmss
-  // DateTime fromQRTimeToDateTime() {
-  //   String year = substring(0, 4);
-  //   String month = substring(4, 6);
-  //   String day = substring(6, 8);
-  //   String hour = substring(8, 10);
-  //   String minute = substring(10, 12);
-  //   String second = substring(12, 14);
-  //   this =
-  //   return DateFormat('$year-$month-$day $hour:$minute:$second').parse(this);
-  // }
 }

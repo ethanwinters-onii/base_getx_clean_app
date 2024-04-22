@@ -26,6 +26,9 @@ class $AssetsIconsGen {
   AssetGenImage get calculator =>
       const AssetGenImage('assets/icons/calculator.png');
 
+  /// File path: assets/icons/china.svg
+  SvgGenImage get china => const SvgGenImage('assets/icons/china.svg');
+
   /// File path: assets/icons/course.png
   AssetGenImage get course => const AssetGenImage('assets/icons/course.png');
 
@@ -120,11 +123,17 @@ class $AssetsIconsGen {
   AssetGenImage get translation =>
       const AssetGenImage('assets/icons/translation.png');
 
+  /// File path: assets/icons/united.svg
+  SvgGenImage get united => const SvgGenImage('assets/icons/united.svg');
+
   /// File path: assets/icons/user.png
   AssetGenImage get user => const AssetGenImage('assets/icons/user.png');
 
   /// File path: assets/icons/video.png
   AssetGenImage get video => const AssetGenImage('assets/icons/video.png');
+
+  /// File path: assets/icons/vietnam.svg
+  SvgGenImage get vietnam => const SvgGenImage('assets/icons/vietnam.svg');
 
   /// File path: assets/icons/write.png
   AssetGenImage get write => const AssetGenImage('assets/icons/write.png');
@@ -137,6 +146,7 @@ class $AssetsIconsGen {
         atom,
         bronzeMedal,
         calculator,
+        china,
         course,
         courseInfoExam,
         courseInfoMaterial,
@@ -163,8 +173,10 @@ class $AssetsIconsGen {
         subscriptionYear,
         test,
         translation,
+        united,
         user,
         video,
+        vietnam,
         write,
         youtube
       ];

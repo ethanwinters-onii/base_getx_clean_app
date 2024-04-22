@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_clean_architecture/core/base/base_controller.dart';
 import 'package:getx_clean_architecture/core/values/enums/status.dart';
+import 'package:getx_clean_architecture/core/values/languages/localization_service.dart';
 import 'package:getx_clean_architecture/features/authentication/data/models/account.dart';
 import 'package:getx_clean_architecture/features/authentication/domain/entities/get_token_model.dart';
 import 'package:getx_clean_architecture/features/authentication/domain/entities/sign_in_model.dart';
@@ -33,6 +34,10 @@ class AuthenticationController extends BaseController {
     account = data as AccountModel?;
     setStatus(Status.success);
     return super.initialData();
+  }
+
+  void changeLocale(String langCode) {
+    LocalizationService.changeLocale(langCode);
   }
 
   void handleSignIn() async {
